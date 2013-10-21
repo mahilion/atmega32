@@ -1,0 +1,50 @@
+   1               		.file	"blinky2.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 B89A      		sbi 55-32,0
+  25               	.LM3:
+  26 0002 BA9A      		sbi 55-32,2
+  27               	.LM4:
+  28 0004 B998      		cbi 55-32,1
+  29               	.LM5:
+  30 0006 C19A      		sbi 56-32,1
+  31               	.L5:
+  32               	.LM6:
+  33 0008 C298      		cbi 56-32,2
+  34               	.LM7:
+  35 000a C098      		cbi 56-32,0
+  36               	.LM8:
+  37 000c B199      		sbic 54-32,1
+  38 000e 00C0      		rjmp .L2
+  39               	.LM9:
+  40 0010 C29A      		sbi 56-32,2
+  41 0012 00C0      		rjmp .L5
+  42               	.L2:
+  43               	.LM10:
+  44 0014 C09A      		sbi 56-32,0
+  45 0016 00C0      		rjmp .L5
+  46               	.LFE6:
+  72               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 blinky2.c
+C:\DOCUME~1\mahi\Local Settings\Temp/cc6baFCg.s:2      *ABS*:0000003f __SREG__
+C:\DOCUME~1\mahi\Local Settings\Temp/cc6baFCg.s:3      *ABS*:0000003e __SP_H__
+C:\DOCUME~1\mahi\Local Settings\Temp/cc6baFCg.s:4      *ABS*:0000003d __SP_L__
+C:\DOCUME~1\mahi\Local Settings\Temp/cc6baFCg.s:5      *ABS*:00000034 __CCP__
+C:\DOCUME~1\mahi\Local Settings\Temp/cc6baFCg.s:6      *ABS*:00000000 __tmp_reg__
+C:\DOCUME~1\mahi\Local Settings\Temp/cc6baFCg.s:7      *ABS*:00000001 __zero_reg__
+C:\DOCUME~1\mahi\Local Settings\Temp/cc6baFCg.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS

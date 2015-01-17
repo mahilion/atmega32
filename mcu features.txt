@@ -1,0 +1,5 @@
+$8-bit microcontroller
+$32 general purpose registers of byte size
+$32Kbytes of Flash program memory
+$1Kbytes of EEPROM
+$2Kbytes of internal SRAM
